@@ -1,0 +1,27 @@
+
+body {
+  background-color: #eee;
+}
+
+a, a:hover{
+  color: #FFFFFF;
+}
+
+.custom {
+  padding-top: 20px;
+  width: 250px;
+}
+
+.some_wrap {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 500px;
+}
+
+.badge {
+  cursor: pointer;
+}
+
+.badge:hover {
+  text-decoration: underline;
+}

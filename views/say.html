@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Hello from Flask!</title>
+
+    <!-- jQuery -->
+    <script src="statics/vendor/jQuery/jquery1.11.0.min.js"></script>
+    <script src="statics/vendor/jQuery/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="statics/vendor/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="statics/vendor/Bootstrap/bootstrap-theme.min.css">
+    <script src="statics/vendor/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="statics/css/custom.css">
+
+  </head>
+  <body>
+	{% if name %}
+		<h2>Hello {{ name }} </h2>
+	{% else  %}
+		<h2>Hello you!</h2>
+	{% endif %}
+  </body>
+</html>
