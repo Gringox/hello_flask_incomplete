@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Flask Users!</title>
+
+    <!-- jQuery -->
+    <script src="statics/vendor/jQuery/jquery1.11.0.min.js"></script>
+    <script src="statics/vendor/jQuery/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="statics/vendor/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="statics/vendor/Bootstrap/bootstrap-theme.min.css">
+    <script src="statics/vendor/Bootstrap/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="statics/css/custom.css">
+
+    <!-- Custom JS -->
+    <script src="statics/js/custom.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal for Update</h4>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="POST">
+              <div class="form-group">
+                  <label for="inputEmail">Email</label>
+                  <input type="text" class="form-control" id="inputEmail" name="Email" readonly>
+              </div>
+              <div class="form-group">
+                  <label for="inputText">Name</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name">
+              </div>
+              <div class="form-group">
+                  <label for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-group some_wrap">
+      {% for user in users %}
+        <li class="list-group-item">
+          <span class="badge" data-toggle="modal" data-target="#myModal">Update</span>
+          <span class="badge"><a href="#">Delete</a></span>
+          <p>{{user[0]}}<p>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
